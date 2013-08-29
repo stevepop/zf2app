@@ -20,8 +20,25 @@ return array(
     ),
 
     'controllers' => array(
+        'factories' => array(
+            'Helloworld\Controller\Index' => function( $serviceLocator ) {
+                $ctr = new Helloworld\Controller\IndexController();
+                $ctr->setGreetingService( $serviceLocator->getServiceLocator()->get('greetingService'));
+                return $ctr;
+
+            }
+        )
+    )
+
+    /*'service_manager' => array(
+        'invokables' => array(
+            'greetingService' => 'Helloworld\Service\GreetingService'
+        )
+    ),
+
+    'controllers' => array(
         'invokables' => array(
             'Helloworld\Controller\Index' => 'Helloworld\Controller\IndexController'
         )
-    )
+    )*/
 );
