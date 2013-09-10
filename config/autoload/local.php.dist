@@ -10,6 +10,12 @@
  * in ZendSkeletonApplication. This is a good practice, as it prevents sensitive
  * credentials from accidentally being committed into version control.
  */
+return array(
+    'db' => array(
+        'username' => 'Your_User_Name',
+        'password' => 'Your_Password',
+    ),
+);
 
 return array(
     // Whether or not to enable a configuration cache.

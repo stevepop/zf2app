@@ -14,10 +14,15 @@ return array(
                 'type' => 'Zend\Mvc\Router\Http\Literal',
                 'options' => array(
                     'route'    => '/',
-                    'defaults' => array(
+                    /*'defaults' => array(
                         'controller' => 'Application\Controller\Index',
                         'action'     => 'index',
+                    ),*/
+                    'defaults' => array(
+                        'controller' => 'StickyNotes\Controller\StickyNotes',
+                        'action' => 'index',
                     ),
+
                 ),
             ),
             // The following is a route to simplify getting started creating
